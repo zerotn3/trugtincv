@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+    head
+        // Meta
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+        // Title
+        title TrungTin.Luong - Personal Resume 2017
+        // Favicons
+        link(rel='shortcut icon', href='assets/img/favicon.png')
+        link(rel='apple-touch-icon', href='assets/img/favicon_60x60.png')
+        link(rel='apple-touch-icon', sizes='76x76', href='assets/img/favicon_76x76.png')
+        link(rel='apple-touch-icon', sizes='120x120', href='assets/img/favicon_120x120.png')
+        link(rel='apple-touch-icon', sizes='152x152', href='assets/img/favicon_152x152.png')
+        // Google Web Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100', rel='stylesheet', type='text/css')
+        // CSS Styles
+        link(rel='stylesheet', href='assets/css/styles.css')
+        // CSS Template
+        link(rel='stylesheet', href='assets/css/theme.min.css')
+        link#color(rel='stylesheet', href='assets/css/red-blue.css')
+        // Styleswitcher
+        //link(rel='stylesheet', href='assets/css/styleswitcher.css')
+    body.header-horizontal
+        // Loader
+        #page-loader.bg-white
+        // Loader / End
+        include partials/header
+
+        #warpper
+        block page
+
+

@@ -1,0 +1,573 @@
+extends layout
+block page
+    // Content
+    #content.bg-white
+        // Section - Home
+        section#start.section.fullheight.bg-secondary.dark.padding-v-60
+            // BG Image
+            .bg-image.animated.infinite.zooming
+                img(src='assets/img/manager-bg01.jpg', alt='...')
+            // Top
+            .container.container-wide.text-md
+                i.icon-before.fa.fa-comments.text-primary
+                | Have you got any questions? Write to me at
+                a.text-primary(href='#') hello@suelo.pl
+            // Middle
+            .container.container-wide.v-center.padding-v-80
+                h1.text-lg.margin-b-0
+                    | Hi! I’m
+                    strong  Luong Trung Tin
+                h5.text-muted.margin-b-40 experienced web developer.
+                span(data-target='local-scroll')
+                    a.btn.btn-lg.btn-primary(href='#resume')
+                        span Go to my resume!
+                        i.ti-arrow-down
+                a.btn.btn-link(href='/pdfFile/myCv')
+                    span Download my CV
+                    i.ti-file
+        // Section - Home / End
+        // Section - Resume
+        section#resume.section.padding-v-60
+            // Content
+            .container.container-wide
+                h6.margin-b-50 Resume
+                .row.padding-lg
+                    .col-md-4.col-sm-6.col-xs-12
+                        // Resume Box / About
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-comment-alt.text-red
+                            h4
+                                strong About
+                                |  Me
+                            p
+                                //| •	Support 8+ projects about technical and solution.<br>
+                                | • 3+ years of experience in Software Development including requirement analysis, design and technical specification, code development, code integration, testing and deployment and Design using Java/J2EE.<br>
+                                | • Worked with Relational Database Management Systems including Oracle & SQL Server.<br>
+                                | • Good working knowledge in deploying Java application servers like WebLogic, Apache Tomcat and JBoss.<br>
+                                | • Experience in writing SQL and PL/SQL scripts including Views, Cursors, and Procedures, Functions, Database Triggers and solid understanding of Database Management System.<br>
+                                | • Worked the application using Spring, Struts (MVC Framework) and Strut Tiles to develop business layer.<br>
+                                | • Experience in Logistic Business.
+                        // Resume Box / Skills
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-cup.text-purple
+                            h4
+                                strong Language
+                                |  skills
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-purple(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong Vietnamese
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-purple(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong English
+
+                    .col-md-4.col-sm-6.col-xs-12
+                        // Resume Box / Specilities
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-mouse-alt.text-yellow
+                            h4
+                                | My
+                                strong Specialities
+                            // Speciality
+                            .speciality
+                                span.speciality-icon
+                                    i.text-muted-2x.ti-desktop
+                                .speciality-content
+                                    h5.margin-b-0 Website production
+                                    p.speciaity-description Great, modern website designes.
+                            // Speciality
+                            .speciality
+                                span.speciality-icon
+                                    i.text-muted-2x.ti-layers-alt
+                                .speciality-content
+                                    h5.margin-b-0 Front-End Development
+                                    p.speciaity-description Great, modern website designes.
+                            // Speciality
+                            .speciality
+                                span.speciality-icon
+                                    i.text-muted-2x.ti-mobile
+                                .speciality-content
+                                    h5.margin-b-0 Responsive design
+                                    p.speciaity-description Great, modern website designes.
+                                    p.
+                        // Resume Box / Education and Jobs
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-crown.text-green
+                            h4
+                                strong Education
+                                |  & jobs
+                            .timeline
+                                // Single event
+                                .timeline-event.te-green
+                                    span.event-date Sep 2009 - Jan 2014
+                                    span.event-name Computer Engineering Technology
+                                    span.event-description University of Technical Education of Ho Chi Minh City.
+
+                    .col-md-4.col-sm-6.col-xs-12
+                        // Resume Box / Languages
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-cup.text-blue
+                            h4
+                                strong Skills
+                                |  & abilities
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong HTML5 / CSS3
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong Java
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong JavaScript / jQuery
+                            // Skill
+                            //.skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='70', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong Nodejs
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong SQL(Server/Oracle)
+                            // Skill
+                            .skill
+                                .progress.progress-animated
+                                    .progress-bar.progress-bar-blue(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+                                        span
+                                strong Subversion/ Git
+                        // Resume Box / Hobbies
+                        .resume-box
+                            span.icon.animated(data-animation='fadeInDown')
+                                i.ti-music-alt.text-orange
+                            h4
+                                strong Hobbies
+                                |  & Interests
+                            ul.list-inline
+                                li
+                                    .icon-box.text-center
+                                        span.icon.icon-sm.icon-circle.icon-orange.icon-filled
+                                            i.ti-music-alt
+                                        span.title Music
+                                li
+                                    .icon-box.text-center
+                                        span.icon.icon-sm.icon-circle.icon-orange.icon-filled
+                                            i.ti-cup
+                                        span.title Sport
+                                li
+                                    .icon-box.text-center
+                                        span.icon.icon-sm.icon-circle.icon-orange.icon-filled
+                                            i.ti-map-alt
+                                        span.title Travel
+        // Section - Resume / End
+        // Section - experience
+        section#portfolio.work-experience.section.bg-grey-dark.dark.padding-v-60
+            // Content
+            .container.container-wide
+                h6.margin-b-50 Experience
+                .col-md-6.col-sm-6.col-xs-12
+                    // Resume Box / Languages
+                    .resume-box
+                        span.icon.animated(data-animation='fadeInDown')
+                            i.ti-home.text-red
+                        h4
+                            strong Developer Java
+                            |  (January 2014 ~ Current)
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-red.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-id-badge
+                            .speciality-content
+                                h5.margin-b-0 DOU Networds Company
+                                p.speciaity-description DOU Networks is an ODC(Off-shore Development Center) in Vietnam providing outsourcing service for SW Development, Testing and 24/7 Service desk.
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-red.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-user
+                            .speciality-content
+                                h5.margin-b-0 Responsibilities
+                                p.speciaity-description With three-year experience As a Java Developer and key person for many projects,
+                                    | I believe that my technical background proves that I am qualified for this position.
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-red.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-cloud-up
+                            .speciality-content
+                                h5.margin-b-0 Technology
+                                p.speciaity-description Spring MVC, Ibatis, Mybatis, SQL Oracle, TomCat JBoss, SVN, GIT.
+                .col-md-6.col-sm-6.col-xs-12
+                    // Resume Box / Languages
+                    .resume-box
+                        span.icon.animated(data-animation='fadeInDown')
+                            i.ti-light-bulb.text-blue
+                        h4
+                            strong Freelance
+                            |  (January 2013 ~ Current)
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-blue.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-id-badge
+                            .speciality-content
+                                h5.margin-b-0  Web Developer
+                                p.speciaity-description Experience developing web pages according to customer requirements (Javascript, Nodejs, ...).
+                                    |  Especially in design web solutions for ecommerce (Wordpress, Opencart ...).
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-blue.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-user
+                            .speciality-content
+                                h5.margin-b-0 Responsibilities
+                                p.speciaity-description Main resource.<br> Team Group.
+                        .speciality
+                            span.speciality-icon.icon.icon-sm.icon-circle.icon-blue.icon-filled.animated(data-animation='fadeInDown')
+                                i.text-muted-2x.ti-cloud-up
+                            .speciality-content
+                                h5.margin-b-0 Technology
+                                p.speciaity-description Java/ JavaScript, Nodejs, MongoDB, Wordpress, Opencart...
+
+
+        // end Work experience
+        // Section - Testimonials
+        section#testimonials.section.bg-white.padding-v-60
+            // Content
+            .container.container-wide
+                h6.margin-b-50 Testimonials
+                h1.margin-b-0
+                    strong 4
+                    |  years of experence -
+                    strong over 1k
+                    |  happy clients!
+                h5.text-primary.margin-b-60 Look at their opinions!
+                .row.padding-lg
+                    .col-lg-4.col-sm-6
+                        // Testimonial
+                        .testimonial
+                            .testimonial-content.font-alt
+                                | Non odio maximus, eget ultrices mauris rutrum. Phasellus non diam in neque interdum gravida.
+                            .testimonial-author.testimonial-with-photo
+                                .testimonial-photo.animated(data-animation='zoomIn')
+                                    img.img-circle(src='assets/img/testimonial-avatar01.jpg', alt='')
+                                .testimonial-author-txt
+                                    span.name Mark Wagner
+                                    span.caption.text-primary Google Inc.
+                        // Testimonial
+                        .testimonial
+                            .testimonial-content.font-alt
+                                | Sed lacinia, nibh sit amet auctor vestibulum, enim risus condimentum erat, quis vestibulum mi ligula a nulla. Nulla vitae pharetra tellus.
+                            .testimonial-author.testimonial-with-photo
+                                .testimonial-photo.animated(data-animation='zoomIn')
+                                    img.img-circle(src='assets/img/testimonial-avatar02.jpg', alt='')
+                                .testimonial-author-txt
+                                    span.name Mark Wagner
+                                    span.caption.text-primary Google Inc.
+                    .col-lg-4.col-sm-6
+                        // Testimonial
+                        .testimonial
+                            .testimonial-content.font-alt
+                                | Sed lacinia, nibh sit amet auctor vestibulum, enim risus condimentum erat, quis vestibulum mi ligula a nulla. Nulla vitae pharetra tellus.
+                                br
+                                br
+                                |                           Aenean ac tincidunt augue, volutpat ullamcorper elit.
+                            .testimonial-author.testimonial-with-photo
+                                .testimonial-photo.animated(data-animation='zoomIn')
+                                    img.img-circle(src='assets/img/testimonial-avatar03.jpg', alt='')
+                                .testimonial-author-txt
+                                    span.name Mark Wagner
+                                    span.caption.text-primary Google Inc.
+                    .col-lg-4.col-sm-6
+                        // Testimonial
+                        .testimonial
+                            .testimonial-content.font-alt
+                                | Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                            .testimonial-author.testimonial-with-photo
+                                .testimonial-photo.animated(data-animation='zoomIn')
+                                    img.img-circle(src='assets/img/testimonial-avatar04.jpg', alt='')
+                                .testimonial-author-txt
+                                    span.name Mark Wagner
+                                    span.caption.text-primary Google Inc.
+        // Section - Testimonials / End
+        // Section - Latest Posts
+        section#posts.section.bg-primary.dark.padding-v-60
+            // Content
+            .container.container-wide
+                h6.margin-b-50 Latest Posts
+                .row.masonry
+                    // Masonry Sizer
+                    .masonry-sizer.col-lg-4.col-sm-6.col-xs-12
+                    // Masonry Element / Post
+                    article.post.post-item.masonry-item.col-lg-4.col-sm-6.col-xs-12
+                        .post-photo
+                            img(src='assets/img/post01.jpg', alt='...')
+                        .post-content.animated(data-animation='fadeInUp')
+                            .meta
+                                span
+                                    i.fa.fa-comment
+                                    a(href='#') 4
+                                span
+                                    i.fa.fa-user
+                                    a(href='#') John Doe
+                                span
+                                    i.fa.fa-tag
+                                    a(href='#') Webdevelopment
+                            .date 22 May, 2014
+                            h1
+                                a(href='#') Awesome Seattle Cycle Trip
+                            p.lead Per sint eirmod expetenda te. Pro ne essent.
+                            p
+                                | Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                            a.btn.btn-primary.btn-xs(href='blog-post-horizontal.html')
+                                span Read more
+                                i.ti-arrow-right
+                    // Masonry Element / Post
+                    article.post.post-item.masonry-item.col-lg-4.col-sm-6.col-xs-12
+                        .post-content.animated(data-animation='fadeInUp')
+                            .meta
+                                span
+                                    i.fa.fa-comment
+                                    a(href='#') 4
+                                span
+                                    i.fa.fa-user
+                                    a(href='#') John Doe
+                                span
+                                    i.fa.fa-tag
+                                    a(href='#') Webdesign
+                            .date 22 May, 2014
+                            h1
+                                a(href='#') Awesome Seattle Cycle Trip
+                            p.lead Per sint eirmod expetenda te. Pro ne essent.
+                            p
+                                | Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                            a.btn.btn-primary.btn-xs(href='blog-post-horizontal.html')
+                                span Read more
+                                i.ti-arrow-right
+                    // Masonry Element / Post
+                    article.post.post-item.masonry-item.col-lg-4.col-sm-6.col-xs-12
+                        .post-photo
+                            img(src='assets/img/post02.jpg', alt='...')
+                        .post-content.animated(data-animation='fadeInUp')
+                            .meta
+                                span
+                                    i.fa.fa-comment
+                                    a(href='#') 4
+                                span
+                                    i.fa.fa-user
+                                    a(href='#') John Doe
+                                span
+                                    i.fa.fa-tag
+                                    a(href='#') Front-End Development
+                            .date 22 May, 2014
+                            h1
+                                a(href='#') Awesome Seattle Cycle Trip
+                            p.lead Per sint eirmod expetenda te. Pro ne essent.
+                            p
+                                | Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                            a.btn.btn-primary.btn-xs(href='blog-post-horizontal.html')
+                                span Read more
+                                i.ti-arrow-right
+                    // Masonry Element / Post
+                    article.post.post-item.masonry-item.col-lg-4.col-sm-6.col-xs-12
+                        .post-photo
+                            img(src='assets/img/post03.jpg', alt='...')
+                        .post-content.animated(data-animation='fadeInUp')
+                            .meta
+                                span
+                                    i.fa.fa-comment
+                                    a(href='#') 4
+                                span
+                                    i.fa.fa-user
+                                    a(href='#') John Doe
+                                span
+                                    i.fa.fa-tag
+                                    a(href='#') Webdevelopment
+                            .date 22 May, 2014
+                            h1
+                                a(href='#') Awesome Seattle Cycle Trip
+                            p.lead Per sint eirmod expetenda te. Pro ne essent.
+                            p
+                                | Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo.
+                            a.btn.btn-primary.btn-xs(href='blog-post-horizontal.html')
+                                span Read more
+                                i.ti-arrow-right
+        // Section - Latest Posts / End
+        // Section - Contact
+        section#contact.section.padding-v-60.min-fullheight
+            // BG Map
+            #google-map.bg-image(data-latitude='10.7719937', data-longitude='106.7036064', data-style='dark')
+            // Contact Box
+            .contact-box.bg-black.dark.animated(data-animation='flipInY')
+                h1
+                    | Don’t hesitate to
+                    strong  contact me
+                    | !
+                // Contact List
+                ul.list-unstyled.list-unstyled-icons
+                    li
+                        i.inline-icon.icon-before-and-after.text-primary.fa.fa-map-marker
+                        | 30/44 Le Thi Hong Street,
+                        br
+                        | Go Vap District,
+                        br
+                        | Ho Chi Minh City, Viet Nam
+                    li
+                        i.inline-icon.icon-before-and-after.text-primary.fa.fa-comment
+                        a(href='#') tin@ltv.vn
+                    li
+                        i.inline-icon.icon-before-and-after.text-primary.fa.fa-phone
+                        | +(84) 98 45 46 273
+                a.btn.btn-primary(href='#', data-target='messenger')
+                    span Use Contact Form
+                    i.ti-email
+                h5.margin-t-60 Check my social media!
+                ul.list-inline
+                    li
+                        a.icon.icon-circle.icon-xs.icon-facebook(href='#')
+                            i.fa.fa-facebook
+                    li
+                        a.icon.icon-circle.icon-xs.icon-twitter(href='#')
+                            i.fa.fa-twitter
+                    li
+                        a.icon.icon-circle.icon-xs.icon-google-plus(href='#')
+                            i.fa.fa-twitter
+                h5 Like me on Facebook
+                // FB Like
+                .fb-like(data-href='http://www.facebook.com/luongtrungtin.lv', data-layout='button_count', data-action='like', data-show-faces='false', data-share='false')
+        // Section - Contact / End
+    // Content / End
+    // Messenger
+    a#messenger-toggle.icon.icon-sm.icon-circle.animated(href='#', data-target='messenger', data-animation='bounceIn', data-animation-delay='300')
+        i.fa.fa-comments
+    #messenger.dark
+        #messenger-box
+            .messenger-box-content
+                // Close
+                a.messenger-close.icon.icon-hover.icon-xs.icon-circle.icon-white(href='#', data-target='messenger')
+                    i.fa.fa-times
+                // Avatar
+                img.img-circle.margin-b-30(src='assets/img/manager-avatar-96x96.jpg', alt='...')
+                h3
+                    | Please fill the
+                    strong  form
+                    |  - I will response as fast as I can!
+                // Contact Form
+                form#contact-form
+                    .form-alert
+                    .form-error.alert.alert-default
+                        ul
+                    .form-group
+                        label Name:
+                        input#name.form-control(type='text', name='name')
+                    .form-group
+                        label Addres e-mail:
+                        input#email.form-control(type='text', name='email')
+                    .form-group
+                        label Message:
+                        textarea#message.form-control(name='message', rows='4')
+                    button.btn.btn-secondary(type='submit')
+                        span Send a message!
+                        i.ti-email
+    // Mobile Navigation
+    a#mobile-nav-toggle.icon.icon-circle.icon-sm.icon-primary.icon-hover.visible-xs.visible-sm(href='#', data-target='mobile-nav')
+        i.ti-menu
+    nav#mobile-nav.bg-white
+        .mobile-nav-wrapper
+            // Avatar
+            img.img-circle.margin-b-30(src='assets/img/manager-avatar-96x96.jpg', alt='...')
+            // Nav
+            ul.nav.nav-vertical
+                li
+                    a(href='#start')
+                        span Start
+                li
+                    a(href='#resume')
+                        span Resume
+                li
+                    a(href='#portfolio')
+                        span Portfolio
+                li
+                    a(href='#testimonials')
+                        span Testimonials
+                li
+                    a(href='#posts')
+                        span Latest Posts
+                li
+                    a(href='#contact')
+                        span Contact
+                li
+                    a(href='page-horizontal.html', target='_blank')
+                        span Promo Page
+                        span.label.label-primary.margin-l-10 NEW!
+                li
+                    a(href='documentation.html', target='_blank')
+                        span Documentation
+            // Social Media
+            .margin-t-20
+                strong.text-sm Follow me!
+                ul.list-inline.margin-t-10
+                    li
+                        a.icon.icon-xs(href='#')
+                            i.fa.fa-facebook.text-muted
+                    li
+                        a.icon.icon-xs(href='#')
+                            i.fa.fa-twitter.text-muted
+                    li
+                        a.icon.icon-xs(href='#')
+                            i.fa.fa-google-plus.text-muted
+        a.mobile-nav-close.icon.icon-hover.icon-xs.icon-circle.icon-primary(href='#', data-target='mobile-nav')
+            i.fa.fa-times
+    // Ajax Wrapper & Loader
+    #ajax-modal
+    #ajax-loader
+        i.fa.fa-spinner.fa-spin
+    // FB Like
+    #fb-root
+    script.
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    // JS Libraries
+    script(src='assets/js/jquery-1.11.3.min.js')
+    // JS Plugins
+    script.
+        window.paceOptions = {
+            target: '#page-loader',
+            ajax: false
+        };
+    script(src='assets/js/plugins.js')
+    // JS Core
+    script(src='assets/js/core.min.js')
+    // Google Map API
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false')
+    // Styleswitcher
+    //script(src='assets/js/styleswitcher.js')
+    // Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+    //
+      <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      </script>
