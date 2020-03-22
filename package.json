@@ -14,11 +14,20 @@
   "license": "MIT",
   "devDependencies": {
     "git-cz": "^4.3.1",
-    "nodemon": "^1.11.0"
+    "jest": "^25.1.0",
+    "nodemon": "^1.11.0",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "start": "node app.js",
     "ci": "git-cz",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "test": "jest --coverage --config ./jest.config.json"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
