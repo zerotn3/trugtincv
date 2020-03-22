@@ -16,6 +16,8 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "ci": "git-cz",
+    "commit": "git-cz"
   }
 }
