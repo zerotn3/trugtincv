@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-
+    name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,12 +19,13 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn test
+    - uses: actions/checkout@master
+    - name: kubectl - Google Cloud GKE cluster.
+      uses: ameydev/gke-kubectl-action@master
       env:
-        CI: true
+        PROJECT_ID: ${{ secrets.PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        CLUSTER_NAME: ${{ secrets.GKE_CLUSTER_NAME }}
+        ZONE_NAME: us-central1-c
+      with:
+        args: apply -f packaging/k8s/manifests/ -n staging
