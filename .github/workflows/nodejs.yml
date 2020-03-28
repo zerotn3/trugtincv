@@ -34,4 +34,16 @@ jobs:
         args: get namespaces
       env:
         # Setting the environment variable KUBECONFIG sets the default config file that kubectl looks for.
-        KUBECONFIG: '/github/workspace/.kube/config'
+        KUBECONFIG: '/github/workspace/.kube/config'  
+        
+    - name: Setup Helm v3
+        uses: azure/setup-helm@v1
+        with:
+          version: "v3.1.2"
+          id: install
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: docker.pkg.github.com
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
